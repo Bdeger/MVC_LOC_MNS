@@ -1,0 +1,223 @@
+/* ==================== */
+/* BASE                 */
+/* ==================== */
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    min-height: 100dvh;        /* ← dvh au lieu de vh (cross-browser) */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==================== */
+/* PAGE BIENVENUE       */
+/* ==================== */
+
+.section-bienvenue {
+    flex: 1;
+    min-height: 100dvh;        /* ← dvh au lieu de vh */
+    display: flex;            
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    
+    background-image: url(/image/image2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  /* ← Effet parallax */
+}
+
+.titre-bienvenue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.titre-bienvenue h1 {
+    color: #FF6400;
+    font-size: 68px;
+    margin-bottom: 16px;
+}
+
+.titre-bienvenue h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.titre-bienvenue p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 50px;
+}
+
+/* ==================== */
+/* BOUTON CONNEXION     */
+/* ==================== */
+
+.btn-connexion {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #ff7e06;
+    padding: 16px 48px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;              /* ← Evite les styles par défaut */
+}
+
+.btn-connexion:hover {
+    background-color: #e15b01;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 126, 6, 0.4);
+}
+
+/* ==================== */
+/* PAGE CONNEXION       */
+/* ==================== */
+
+.section-login {
+    flex: 1;
+    min-height: 100dvh;        /* ← dvh cross-browser */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    
+    background-image: url(/image/image2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.section-login .login-container {
+    background: rgba(0, 0, 0, 0.5);   /* ← Fond semi-transparent */
+    backdrop-filter: blur(10px);        /* ← Effet verre dépoli */
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    color: white;
+    text-align: center;
+}
+
+.section-login .login-container h1 {
+    color: #FF6400;
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.section-login .login-container h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 32px;
+    opacity: 0.9;
+}
+
+.login-container .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.login-container .form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.login-container .form-group input {
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.login-container .form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.login-container .form-group input:focus {
+    border: 2px solid #FF6400;  /* ← Bordure orange au focus */
+}
+
+#form-login .form-note {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+#form-login .btn-submit {
+    width: 100%;
+    padding: 16px;
+    background-color: #ff7e06;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Inter", sans-serif;
+}
+
+
+#form-login .btn-submit:hover {
+    background-color: #e15b01;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 126, 6, 0.4);
+}
+
+
+/* ==================== */
+/* RESPONSIVE           */
+/* ==================== */
+
+@media screen and (max-width: 768px) {
+    .titre-bienvenue h1 {
+        font-size: 48px;
+    }
+    
+    .titre-bienvenue h2 {
+        font-size: 24px;
+    }
+    
+    .titre-bienvenue p {
+        margin-bottom: 40px;
+    }
+
+    .login-container {
+        padding: 30px 20px;
+    }
+
+    .login-container h1 {
+        font-size: 32px;
+    }
+}

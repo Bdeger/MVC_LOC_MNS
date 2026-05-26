@@ -1,0 +1,13 @@
+# Activer le module de réécriture d'URL apache 
+# sans ça aucune réécriture ne fonctionne, c'est comme allumer l'interrupteur
+
+# si le fichier ou le dossier existe, on le sert directement (css, images, JS...) 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# !-f -> le fichier existe physiquement -f = file
+# !-d -> c'est un dossier qui existe -d = directory
+
+# pour que ts fichiers CSS, Js , images soient chargés normalement
+
+# sinon, on redirige tout vers index.php en passant l'URL
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
