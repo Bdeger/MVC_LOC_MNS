@@ -1,0 +1,15 @@
+@import "nav.css";
+.container{
+    margin:auto;
+}
+@media(min-width:768px){
+    .container{
+        width:718px;
+        box-sizing:border-box;
+    }
+}
+@media(min-width:992px){
+    .container{
+        width:942px;
+    }
+}
