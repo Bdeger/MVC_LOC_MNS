@@ -1,32 +1,17 @@
-header{
+header .top-header{
     display:flex;
-    flex-direction: column;
-    width:100%;
-}
-
-header .first{
-    display:flex;
-    flex-direction: row;
     width: 100%;
+    flex-direction: column;
     box-sizing: border-box;
     min-height:80px;
 
-    /* pb de chargement image */
-    background-image : url(img/image4.jpg);
+    background-image: url(../img/image2.jpg);
     background-size:cover;
     background-position:center;
+
+    text-align: center;
+    color:white;
+    font-size:10px;
    
 }
 
-header .columns{
-    width: 50%;
-}
-header .left{
-
-}
-header .right{
-    display: flex;
-    
-    justify-content: end;
-    align-items: center;
-}
